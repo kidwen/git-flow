@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>git workflow</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+	<link rel="icon" href="/favicon.ico">
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<ul>
+					<li>
+						<a href="#/1">clone repository</a>
+					</li>
+					<li>
+						<a href="#/2">
+							switch repository
+						</a>
+					</li>
+					<li>
+						<a href="#/3">
+							push code
+						</a>
+					</li>
+					<li>
+						<a href="#/4">
+							rebase code
+						</a>
+					</li>
+				</ul>
+			</section>
+			<section>
+				clone your repository.
+				<pre>
+					<code data-trim data-noescape data-line-numbers="1|3">
+						git clone git@github.com:kidwen/git-flow.git
+						// or
+						git clone https://github.com/kidwen/git-flow.git
+					</code>
+				</pre>
+			</section>
+			<section>
+				check the branches
+				<pre>
+					<code data-trim data-noescape data-line-numbers="">
+						git branch -a
+					</code>
+				</pre>
+				<div class="fragment fade-up">
+					Then you can switch to other branch if the branch exited.
+					<pre>
+						<code data-trim data-noescape data-line-numbers>
+							git checkout dev
+						</code>
+					</pre>
+					Or create a new branch base on this branch by use params `-b`.
+					<pre>
+						<code data-trim data-noescape data-line-numbers>
+							git checkout -b dev
+						</code>
+					</pre>
+				</div>
+			</section>
+			<section>
+				How to push your code to remote respository?
+				<pre>
+					<code data-trim data-noescape data-line-numbers="2|4|6|8">
+						# check witch file has been changed
+						git status
+						# add all files
+						git add .
+						# set this commit message
+						git commit -m "commit message"
+						# push code to remote repository
+						git push -u origin dev
+					</code>
+				</pre>
+			</section>
+			<section>
+				Rebase code.</br>
+				If you current branch is dev, and you want rebase to master.
+				<pre>
+					<code data-trim data-noescape data-line-numbers="2|4|6|8">
+						# fetch the latest changes form remote git repository.
+						git fetch
+						# integrate changes from one branch into another
+						git rebase origin/master
+						# if you have a conflicts, resolve it and use next command
+						git rebase --continue
+						# or you want to cancel the rebasing
+						git rebase --abort
+					</code>
+				</pre>
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: false,
+			slideNumber: true,
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
