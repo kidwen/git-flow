@@ -13,6 +13,13 @@
 	<link rel="icon" href="/favicon.ico">
 	<!-- Theme used for syntax highlighted code -->
 	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	<style>
+		.fix-button {
+			position: absolute;
+			bottom: 200px;
+			right: 36px;
+		}
+	</style>
 </head>
 
 <body>
@@ -75,7 +82,7 @@
 			<section>
 				How to push your code to remote respository?
 				<pre>
-					<code data-trim data-noescape data-line-numbers="2|4|6|8">
+					<code data-trim data-noescape data-line-numbers="2,4,6,8">
 						# check witch file has been changed
 						git status
 						# add all files
@@ -91,7 +98,7 @@
 				Rebase code.</br>
 				If you current branch is dev, and you want rebase to master.
 				<pre>
-					<code data-trim data-noescape data-line-numbers="2|4|6|8">
+					<code data-trim data-noescape data-line-numbers="2|4,6,8">
 						# fetch the latest changes form remote git repository.
 						git fetch
 						# integrate changes from one branch into another
@@ -102,6 +109,12 @@
 						git rebase --abort
 					</code>
 				</pre>
+				
+			</section>
+			<section>
+				<a href="#/0">
+					🏠back to home
+				</a>
 			</section>
 		</div>
 	</div>
