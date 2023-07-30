@@ -65,7 +65,7 @@
 				</pre>
 			</section>
 			<section>
-				check the branches and switch another branch
+				Check the branches and switch another branch.
 				<pre>
 					<code data-trim data-noescape data-line-numbers="">
 						git branch -a
@@ -76,14 +76,21 @@
 					<pre>
 						<code data-trim data-noescape data-line-numbers>
 							git checkout dev
+							// or
+							git switch dev
 						</code>
 					</pre>
 					Or create a new branch base on this branch by use params `-b`.
 					<pre>
 						<code data-trim data-noescape data-line-numbers>
 							git checkout -b dev
+							// or
+							git switch -c dev
 						</code>
 					</pre>
+				</div>
+				<div class="fragment fade-up">
+					Or you can use `switch` command.
 				</div>
 			</section>
 			<section>
@@ -116,11 +123,11 @@
 						git rebase --abort
 					</code>
 				</pre>
-				
+				🔄 Then you can push code to the remote.
 			</section>
 			<section>
 				<a href="#/0">
-					🏠 back to start
+					🏠 back to start.
 				</a>
 			</section>
 			<section data-background-iframe="https://kidwen.top" data-background-interactive>
