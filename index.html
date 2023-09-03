@@ -48,6 +48,11 @@
 						</a>
 					</li>
 					<li>
+						<a href="#/5">
+							add tag
+						</a>
+					</li>
+					<li>
 						<a href="#/7">
 							🔥 kidwen's home page
 						</a>
@@ -106,7 +111,7 @@
 				</div> -->
 			</section>
 			<section>
-				How to push your code to remote respository?
+				How to push your code to remote repository?
 				<pre>
 					<code data-trim data-noescape data-line-numbers="2,4,6,8">
 						# check witch file has been changed
@@ -136,6 +141,21 @@
 					</code>
 				</pre>
 				🔄 Then you can push code to the remote.
+			</section>
+			<section>
+				Add Tag.</br>
+				if you want add tag for before commit, first you need checkout to that commit.
+				<pre>
+					<code data-trim data-noescape data-line-numbers="2|4,6">
+						# checkout to that commit by commit id
+						git checkout < commit id >
+						# add a tag for current commit.
+						git tag release-1.0.0
+						# push the tag to origin repository
+						git push origin release-1.0.0
+					</code>
+				</pre>
+				<!-- 🔄 Then you can push code to the remote. -->
 			</section>
 			<section>
 				<a href="#/0">
